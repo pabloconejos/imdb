@@ -1,0 +1,11 @@
+<div class="rating">
+    @for (item of stars; track $index) {
+        <span 
+            (mouseover)="getValueHover($index + 1)"
+            (mouseleave)="mouseLeaveStar()"
+            class="star"
+            [ngClass]="{'star-gold': (isHover && valueHover >= $index + 1) || (!isHover && rating >= $index + 1)}"
+            (click)="onClick($index + 1)">&#9733;
+        </span>
+    }
+</div>

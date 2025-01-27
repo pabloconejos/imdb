@@ -1,0 +1,19 @@
+.rating {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.star {
+    transition: all 0.2 ease;
+}
+  
+.star:hover {
+    cursor: pointer;
+    color: gold;
+}
+
+.star-gold {
+    color: gold;
+}

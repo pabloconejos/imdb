@@ -1,0 +1,35 @@
+@if (movie) {
+    <div class="ficha-container info">
+        <div class="img-section">
+            <img [src]="'https://image.tmdb.org/t/p/original/' + movie.poster_path" [alt]="movie.title">
+        </div>
+        <div class="info-section">
+            <h2>{{movie.title}}</h2>
+            <p>{{movie.overview}}</p>
+            <p>{{movie.budget | currency }}</p>
+            @for (genre of movie.genres; track $index) {
+                <p>{{genre.name}}</p>
+            }
+        </div>
+
+        <button class="btn-favorita" (click)="toogleFav(movie.id)">
+            <span [ngClass]="favService.isFavorita({id: movie.id}) ? 'star-fav' : ''" class="star">&#9733;</span>
+        </button>
+        
+    </div>
+
+    <form [formGroup]="opinionForm" (ngSubmit)="onSubmit()" class="ficha-container form">
+        <div class="input-section">
+            <label for="critica">Critica</label>
+            <textarea formControlName="critica" name="user-critica" id="critica"></textarea>
+        </div>
+        
+    
+        <div>
+            <label>Rating</label>
+            <app-stars-rating [maxstars]="10" [rating]="opinionForm.value.rating" (score)="getScore($event)"></app-stars-rating>
+        </div>
+        
+    </form>
+}
+

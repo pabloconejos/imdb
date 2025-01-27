@@ -1,0 +1,107 @@
+.ficha-container {
+    border: 1px solid #e0e0e0; /* borde gris claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra suave */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; /* Fondo blanco */
+    overflow: hidden; /* Evita desbordes de contenido */
+    position: relative;
+
+    label {
+        font-weight: bold;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    position: relative;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+}
+
+img {
+    max-width: 300px; /* Ancho máximo */
+    border-radius: 8px; /* Bordes redondeados en la imagen */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333; /* Color del título */
+    margin: 0;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #555; /* Color de texto más suave */
+    margin: 5px 0;
+}
+
+p:first-of-type {
+    font-weight: bold; /* Resalta la descripción de la película */
+}
+
+.info-section p:last-of-type {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff5722; /* Color llamativo para el presupuesto */
+}
+
+.ficha-container p {
+    word-wrap: break-word; /* Evita que las palabras se desborden */
+    line-height: 1.4;
+}
+
+.ficha-container p.genres {
+    font-style: italic; /* Géneros en cursiva */
+    color: #7f8c8d; /* Color gris claro para los géneros */
+}
+
+
+
+.input-section {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+}
+
+
+.btn-favorita {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+
+    .star {
+        font-size: 30px;
+    }
+
+
+    .star-fav {
+        color: gold;
+    }
+}
+  
+  
